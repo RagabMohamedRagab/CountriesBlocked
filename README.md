@@ -9,7 +9,6 @@ A .NET Core Web API to manage **blocked countries** and validate **IP addresses*
 ## 🚀 Live Demo
 
 🌐 [Swagger UI Live](http://countriesblocks.runasp.net/index.html)  
-> *(Make sure it's hosted and Swagger is enabled in production)*
 
 ---
 
