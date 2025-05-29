@@ -1,4 +1,4 @@
-using CountriesBlocked.Application.Dtos;
+﻿using CountriesBlocked.Application.Dtos;
 using CountriesBlocked.Application.ThirdPartyClients;
 using CountriesBlocked.Infrastructure.BackgroundServices;
 using CountriesBlocked.Infrastructure.IManger;
@@ -40,17 +40,15 @@ builder.Services.AddScoped<ILocationService,LocationService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
     app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI(c => {
         c.SwaggerEndpoint("/swagger/v1/swagger.json","My API V1");
         c.RoutePrefix=string.Empty;
     });
-}
-
 app.UseHttpsRedirection();
+app.UseDefaultFiles(); 
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

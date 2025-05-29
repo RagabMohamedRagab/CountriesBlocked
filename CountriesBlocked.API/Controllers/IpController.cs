@@ -45,7 +45,7 @@ namespace CountriesBlocked.API.Controllers
                 UserAgent=userAgent
             });
 
-            return Ok(response);
+            return Ok(new { response.Entity.Country_Code,BlockedStatus = isExist });
         }
     }
 }
